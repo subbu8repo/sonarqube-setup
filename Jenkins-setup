@@ -1,0 +1,6 @@
+putty.exe -ssh -L 8080:localhost:8080 username@ipaddress
+
+localhost:8080
+
+sudo cat /home/bitnami/bitnami_credentials
+user and password
