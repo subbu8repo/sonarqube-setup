@@ -62,3 +62,4 @@ vim /var/lib/jenkins/config.xml
 line 7 use security true=false
 systemctl restart jenkins.service
 
+chkconfig jenkins on
