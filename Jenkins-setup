@@ -49,3 +49,16 @@ Once you are done with the above steps, it is better to restart Jenkins.
 
 http://<ec2-instance-public-ip>:8080/restart
 The docker agent configuration is now successful.
+
+
+1. port number change
+vim /usr/lib/systemd/system/jenkins.service
+line 67 (8080=8090)
+systemctl daemon-reload
+systemctl restart jenkins.service
+
+2. password change
+vim /var/lib/jenkins/config.xml
+line 7 use security true=false
+systemctl restart jenkins.service
+
