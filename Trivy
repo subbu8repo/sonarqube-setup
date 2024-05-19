@@ -32,3 +32,4 @@ mc1arke/sonarqube-with-community-branch-plugin
 docker run -d --name sonar -p 9000:9000 mc1arke/sonarqube-with-community-branch-plugin
 in pipeline trivy is already installed in vm so you can use command line instead of extinsion and add trivy fs scan command
 trivy fs --format table -o trivy-fs-report.html . (dot means scan the current folder)
+trivy image --format table -o trivy-image-report.html subbu8docker/boardazure:latest
