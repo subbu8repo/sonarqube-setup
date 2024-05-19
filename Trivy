@@ -4,4 +4,29 @@ sudo apt install openjdk-17-jre -y
 java --version
 maven
 sudo apt install maven -y
-to setup sonarqube use community version docker image
+for java and maven we need to define capabilities(some kind of requirements needed while running application)
+go to agentpool and add predefined capabilities like both java and maven are present in this agent
+Name:
+maven
+Value:
+true
+
+Name:
+java
+Value:
+true
+
+trivy
+sudo snap install trivy
+trivy --version
+we are going to setup sonarqube through docker and use community branch plugin docker image for scanning multiple branchs
+docker
+sudo apt  install docker.io
+by default not all the users have access to execute docker commands
+so give permissions 
+sudo chmod 666 /var/run/docker.sock  this give access to other users also or
+sudo usermod -aG docker username
+test it by using command docker pull hello-world
+community branch plugin sonarqube
+mc1arke/sonarqube-with-community-branch-plugin
+docker run -d --name sonar -p 9000:9000 mc1arke/sonarqube-with-community-branch-plugin
