@@ -1,0 +1,7 @@
+java
+sudo apt install openjdk-17-jre-headless
+sudo apt install openjdk-17-jre -y
+java --version
+maven
+sudo apt install maven -y
+to setup sonarqube use community version docker image
