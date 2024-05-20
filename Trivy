@@ -27,6 +27,7 @@ by default not all the users have access to execute docker commands
 so give permissions 
 sudo chmod 666 /var/run/docker.sock  this give access to other users also or
 sudo usermod -aG docker username
+sudo systemctl restart docker
 test it by using command docker pull hello-world
 community branch plugin sonarqube
 mc1arke/sonarqube-with-community-branch-plugin
